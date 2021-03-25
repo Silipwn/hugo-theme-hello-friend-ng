@@ -9,6 +9,12 @@
     {{ template "_internal/google_analytics.html" . }}
 {{- end}}
 
+<script data-goatcounter="https://silipwn.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<noscript>
+    <img src="https://silipwn.goatcounter.com/count?p=/test-noscript">
+</noscript>
+
 {{ range $val := $.Site.Params.customJS }}
     {{ if gt (len $val) 0 }}
         <script src="{{ $val }}"></script>
